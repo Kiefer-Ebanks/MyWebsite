@@ -79,10 +79,28 @@ function Home() {
       <div className="hero">
         <h1 className="hero-title">Hi, I'm Kiefer</h1>
         <p className="hero-subtitle">I'm a software engineer & creative problem solver</p>
-        <p className="hero-description">I'm a junior at Boston University. I build thoughtful, reliable software. Welcome to my website.</p>
+        <p className="hero-description">I'm a junior at Boston University studying Computer Science and minoring in Film and Television. I am from the Cayman Islands and now call Boston home. I'm really into front-end engineering, UI/UX design, and distributed systems. I love anything that blends creativity with technical problem-solving.</p>
+        <p className="hero-description">Outside of tech, I like to work out, dive deep into the lore and production process behind my favorite movies and shows (hence the minor), 3D model, and lately, I've been getting into Jiu-Jitsu.</p>
         <div className="hero-ctas">
           <a className="btn btn-primary" href="#projects">View my work</a>
           <a className="btn btn-secondary" href="#resume">Resume</a>
+        </div>
+      </div>
+      <div className="connect-column-fixed">
+        <h3 className="connect-title">Let's connect</h3>
+        <div className="connect-links">
+          <a href="https://linkedin.com/in/kiefer-ebanks" className="connect-link" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Kiefer-Ebanks" className="connect-link" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github"></i>
+            GitHub
+          </a>
+          <a href="mailto:kieferebanks@gmail.com" className="connect-link">
+            <i className="fas fa-envelope"></i>
+            Email
+          </a>
         </div>
       </div>
     </section>
@@ -128,6 +146,23 @@ function Projects() {
           </div>
         ))}
       </div>
+      <div className="connect-column-fixed">
+        <h3 className="connect-title">Let's connect</h3>
+        <div className="connect-links">
+          <a href="https://linkedin.com/in/kiefer-ebanks" className="connect-link" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Kiefer-Ebanks" className="connect-link" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github"></i>
+            GitHub
+          </a>
+          <a href="mailto:kieferebanks@gmail.com" className="connect-link">
+            <i className="fas fa-envelope"></i>
+            Email
+          </a>
+        </div>
+      </div>
     </section>
   );
 }
@@ -171,6 +206,23 @@ function Resume() {
           </div>
         </div>
       </div>
+      <div className="connect-column-fixed">
+        <h3 className="connect-title">Let's connect</h3>
+        <div className="connect-links">
+          <a href="https://linkedin.com/in/kiefer-ebanks" className="connect-link" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Kiefer-Ebanks" className="connect-link" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github"></i>
+            GitHub
+          </a>
+          <a href="mailto:kieferebanks@gmail.com" className="connect-link">
+            <i className="fas fa-envelope"></i>
+            Email
+          </a>
+        </div>
+      </div>
     </section>
   );
 }
@@ -206,6 +258,23 @@ function Experience() {
         <p className="timeline-description">● Assembled and repaired 15+ computers, laptops, and servers by diagnosing hardware and software issues and applying targeted repair solutions to restore full system functionality.</p>
         <p className="timeline-description">● Advised clients on tailored technology upgrades, generating $500+ in revenue and enhancing customer satisfaction.</p>
       </div>
+      <div className="connect-column-fixed">
+        <h3 className="connect-title">Let's connect</h3>
+        <div className="connect-links">
+          <a href="https://linkedin.com/in/kiefer-ebanks" className="connect-link" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Kiefer-Ebanks" className="connect-link" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github"></i>
+            GitHub
+          </a>
+          <a href="mailto:kieferebanks@gmail.com" className="connect-link">
+            <i className="fas fa-envelope"></i>
+            Email
+          </a>
+        </div>
+      </div>
     </section>
   );
 }
@@ -216,9 +285,26 @@ function Contacts() {
       <h2 className="section-title">Contacts</h2>
       <p className="section-subtitle">Get in touch</p>
       <div className="contacts-grid">
-        <a className="contact-card" href="mailto:you@example.com"><i className="fas fa-envelope"></i> Email</a>
-        <a className="contact-card" href="https://github.com" target="_blank" rel="noreferrer"><i className="fab fa-github"></i> GitHub</a>
-        <a className="contact-card" href="https://www.linkedin.com" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i> LinkedIn</a>
+        <a className="contact-card" href="mailto:kieferebanks@gmail.com"><i className="fas fa-envelope"></i> Email</a>
+        <a className="contact-card" href="https://github.com/Kiefer-Ebanks" target="_blank" rel="noreferrer"><i className="fab fa-github"></i> GitHub</a>
+        <a className="contact-card" href="https://linkedin.com/in/kiefer-ebanks" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+      <div className="connect-column-fixed">
+        <h3 className="connect-title">Let's connect</h3>
+        <div className="connect-links">
+          <a href="https://linkedin.com/in/kiefer-ebanks" className="connect-link" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Kiefer-Ebanks" className="connect-link" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github"></i>
+            GitHub
+          </a>
+          <a href="mailto:kieferebanks@gmail.com" className="connect-link">
+            <i className="fas fa-envelope"></i>
+            Email
+          </a>
+        </div>
       </div>
     </section>
   );
