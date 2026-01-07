@@ -38,9 +38,9 @@ const activeIndex = ref(0)
 
 const contentItems = ref([
   {
-    title: 'about me',
-    subtitle: 'I\'m a Junior Computer Science major at Boston University',
-    paragraph: 'As an aspiring software engineer, I\’m especially interested in web development and distributed systems - though I have experience in IT as well. I\’m also creative at heart, which is why I have a minor in Film & Television. Storytelling, visuals, and design all influence how I approach all my projects, CS and film alike. In my free time, I\’m working toward becoming fluent in Spanish and trying to improve my drawing ability.',
+    title: 'About Me',
+    subtitle: 'Hi there! I\'m Kiefer Ebanks and welcome to my website!',
+    paragraph: 'I\'m currently a Junior Computer Science major at Boston University. As an aspiring software engineer, I\’m especially interested in web development and distributed systems - though I have experience in IT as well. I\’m also creative at heart, which is why I have a minor in Film & Television. Storytelling, visuals, and design all influence how I approach all my projects, CS and film alike. In my free time, I\’m working toward becoming fluent in Spanish and trying to improve my drawing ability.',
     mainImage: '/MePic.jpg',
     thumbnail: '/MePic.jpg'
   },
@@ -48,22 +48,22 @@ const contentItems = ref([
     title: 'Fitness',
     subtitle: 'Here is a photo of my friends and I running a half-marathon!',
     paragraph: 'I LOVE lifting weights and setting new PRs (I\'m currently chasing the fated 225 Bench). This year I\'m also doing boxing classes, which is a cool way to shake things up and learn a new skill. I\'m also considering running a full marathon this year (but that still sounds a little crazy right now)',
-    mainImage: '/CameraPic.jpg',
-    thumbnail: '/CameraPic.jpg'
+    mainImage: '/HalfPic.jpg',
+    thumbnail: '/HalfPic.jpg'
   },
   {
     title: 'Home',
     subtitle: 'I am lucky enough to call the Cayman Islands home!',
     paragraph: 'Cayman is where my family is, and where island life brings a pace and warmth that’s hard to replicate anywhere else. I love the beach, going to my grandma\s house on Sundays, and watching fireworks light up the entire coastline on New Year\'s Eve',
-    mainImage: '/MePic.jpg',
-    thumbnail: '/MePic.jpg'
+    mainImage: '/FamPic.JPG',
+    thumbnail: '/FamPic.JPG'
   },
   {
     title: 'Film',
     subtitle: 'I’m a big fan of watching, creating, reviewing, and talking about movies',
     paragraph: 'Film is where I get to lean fully into creativity. I love breaking down scenes, themes, and the little details that make films memorable. I also enjoy making short films and drafting up stories I hope to turn into real projects one day! Check out some of my work under the creativity tab!',
-    mainImage: '/MePic.jpg',
-    thumbnail: '/MePic.jpg'
+    mainImage: '/CamPic.jpg',
+    thumbnail: '/CamPic.jpg'
   },
   {
     title: 'Future',
@@ -74,8 +74,8 @@ const contentItems = ref([
       'Write a short story',
       'Gain more experience in my field and keep learning'
     ],
-    mainImage: '/MePic.jpg',
-    thumbnail: '/MePic.jpg'
+    mainImage: '/2026Pic.jpg',
+    thumbnail: '/2026Pic.jpg'
   }
 ])
 
@@ -107,15 +107,23 @@ const selectContent = (index) => {
   color: #222;
   text-transform: lowercase;
   letter-spacing: -0.02em;
+  min-height: 6rem;
+  display: flex;
+  align-items: flex-end;
 }
 
 .text-content h2 {
   font-weight: 400;
   font-size: 1.25rem;
   color: #666;
-  max-width: 420px;
+  max-width: 500px;
   margin-bottom: 0;
   line-height: 1.5;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: flex-start;
 }
 
 .text-content p {
@@ -124,6 +132,8 @@ const selectContent = (index) => {
   color: #555;
   max-width: 500px;
   font-size: 1rem;
+  min-height: 8rem;
+  text-align: left;
 }
 
 .text-content .bullet-list {
@@ -134,6 +144,8 @@ const selectContent = (index) => {
   max-width: 500px;
   font-size: 1rem;
   line-height: 1.7;
+  min-height: 8rem;
+  text-align: left;
 }
 
 .text-content .bullet-list li {
@@ -147,9 +159,9 @@ const selectContent = (index) => {
 }
 
 .image-content img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
+  width: 420px;
+  height: 420px;
+  object-fit: cover;
   border-radius: 20px;
 }
 
