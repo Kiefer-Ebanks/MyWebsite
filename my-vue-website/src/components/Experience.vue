@@ -13,9 +13,9 @@
           <div class="job-header">
             <h2 class="company-name">{{ job.company }}</h2>
             <span class="job-location">{{ job.location }}</span>
-            <span class="job-title">{{ job.title }}</span>
             <span class="job-date">{{ job.date }}</span>
           </div>
+          <div class="job-title">{{ job.title }}</div>
           <ul class="job-description">
             <li v-for="(point, pointIndex) in job.description" :key="pointIndex">
               {{ point }}
@@ -153,6 +153,9 @@ const jobs = ref([
   font-size: 1rem;
   color: #666;
   font-style: italic;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  text-align: left;
 }
 
 .job-date {
