@@ -4,7 +4,10 @@
       <div class="text-content">
         <h1>{{ currentContent.title }}.</h1>
         <h2>{{ currentContent.subtitle }}</h2>
-        <p>{{ currentContent.paragraph }}</p>
+        <p v-if="typeof currentContent.paragraph === 'string'">{{ currentContent.paragraph }}</p>
+        <ul v-else class="bullet-list">
+          <li v-for="(item, index) in currentContent.paragraph" :key="index">{{ item }}</li>
+        </ul>
       </div>
 
       <div class="image-content">
@@ -64,8 +67,13 @@ const contentItems = ref([
   },
   {
     title: 'Future',
-    subtitle: 'Here are some of my goals for 2026',
-    paragraph: 'Read 3 new books (yes I know its a low number, lack of time :( ), bench 225 (current max 205), write a short story, gain more experience in my field and keep learning',
+    subtitle: 'Here are some of my goals for 2026:',
+    paragraph: [
+      'Read 3 new books (yes I know its a low number, lack of time :( )',
+      'Bench 225 (current max 205)',
+      'Write a short story',
+      'Gain more experience in my field and keep learning'
+    ],
     mainImage: '/MePic.jpg',
     thumbnail: '/MePic.jpg'
   }
@@ -116,6 +124,20 @@ const selectContent = (index) => {
   color: #555;
   max-width: 500px;
   font-size: 1rem;
+}
+
+.text-content .bullet-list {
+  margin-top: 2rem;
+  padding-left: 0;
+  list-style-position: inside;
+  color: #555;
+  max-width: 500px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.text-content .bullet-list li {
+  margin-bottom: 0.5rem;
 }
 
 .image-content {
