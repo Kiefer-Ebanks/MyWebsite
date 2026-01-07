@@ -1,13 +1,14 @@
 <script setup>
 import Navbar from "./components/Navbar.vue"
 import About from "./components/About.vue"
+import Experience from "./components/Experience.vue"
 </script>
 
 <template>
   <Navbar />
   <main>
     <About />
-    <PhotoStrip />
+    <Experience />
   </main>
 </template>
 
