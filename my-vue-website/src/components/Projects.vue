@@ -8,21 +8,24 @@
         :key="index"
         class="project-card"
       >
-        <h2 class="project-title">{{ project.title }}</h2>
-        <div class="tech-stack">
-          <span
-            v-for="(tech, techIndex) in project.techStack"
-            :key="techIndex"
-            class="tech-tag"
-          >
-            {{ tech }}
-          </span>
+        <div class="project-card-content">
+          <h2 class="project-title">
+            <a :href="project.link" :target="project.link ? '_blank' : '_self'" class="project-link">{{ project.title }}</a>
+          </h2>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="tech-stack">
+            <span
+              v-for="(tech, techIndex) in project.techStack"
+              :key="techIndex"
+              class="tech-tag"
+            >
+              {{ tech }}
+            </span>
+          </div>
         </div>
-        <ul class="project-description">
-          <li v-for="(point, pointIndex) in project.description" :key="pointIndex">
-            {{ point }}
-          </li>
-        </ul>
+        <div class="project-date-bar">
+          <span class="project-date">{{ project.date }}</span>
+        </div>
       </div>
     </div>
 
@@ -117,48 +120,37 @@ const projects = ref([
   {
     title: 'FormFixer',
     techStack: ['C++', 'Python', 'PostgreSQL'],
-    description: [
-      'Description point 1 for project 2',
-      'Description point 2 for project 2',
-      'Description point 3 for project 2'
-    ]
+    description: 'Description point 3 for project 4',
+    date: 'Jan 2026 - Present',
+    link: ''
   },
   {
-    title: 'Truss Plant Structures Website React conversion',
+    title: 'TPS Website React Conversion',
     techStack: ['React', 'WordPress'],
-    description: [
-      'Description point 1 for project 2',
-      'Description point 2 for project 2',
-      'Description point 3 for project 2'
-    ]
+    description: 'Description point 3 for project 4',
+    date: 'Dec 2025 - Jan 2026',
+    link: 'https://trussplant.ky/'
   },
   {
-    title: 'This Website!',
-    techStack: ['Vue','Vite', 'Netlify'],
-    description: [
-      'Description point 1 for project 3',
-      'Description point 2 for project 3',
-      'Description point 3 for project 3'
-    ]
+    title: 'This Website',
+    techStack: ['Vue','Vite', 'Netlify', 'CSS'],
+    description: 'A personal portfolio showcasing my projects, skills, and interests. Built as a space to explore my work and the ideas I enjoy building.',
+    date: 'Jan 2026',
+    link: ''
   },
   {
     title: 'PhishSchool (BostonHacks Project)',
     techStack: ['Python', 'React', 'FastAPI', 'Supabase', 'Gemini API', 'Twilio API', 'Node.js', 'Vite', 'Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
-    description: [
-      'Description point 1 for project 4',
-      'Description point 2 for project 4',
-      'Description point 3 for project 4'
-    ]
+    description: 'Developed a full-stack phishing detection and cybersecurity training platform that helps users identify and defend against real-world phishing attacks. The app analyzes suspicious messages and emails using AI-powered detection, and provides interactive training tools for learning. Users can practice through guided lessons, simulated phishing campaigns, and automated feedback.',
+    date: 'Oct 2025',
+    link: 'https://phish-school.vercel.app/'
   },
   {
     title: 'Movie Search Web App',
-    techStack: ['React', 'Node.js', 'Vite', 'Next.js', 'TypeScript', 'TailwindCSS', 'Docker', 'Vercel', 'NoSQL'],
-    description: [
-      'Developed a dynamic movie searching platform using React, Vite, Next.js, JavaScript, TypeScript, and Tailwind CSS to deliver instant search results and display trending titles with smooth UI responsiveness.',
-      'Integrated The Movie Database Rest API to fetch live movie data and an Appwrite Database using NoSQL to store and track user search histories, implementing search debouncing for optimized performance.',
-      'Containerized the application with Docker to ensure environment consistency and scalability across deployments.',
-      'Deployed on Vercel, achieving a seamless, production-ready, and mobile-responsive web experience.'
-    ]
+    techStack: ['React', 'TailwindCSS', 'Docker', 'Node.js', 'Vite', 'Next.js', 'TypeScript', 'Vercel', 'NoSQL'],
+    description: 'Built a dynamic movie discovery platform that allows users to search for films in real time, explore trending titles, and enjoy a smooth, responsive browsing experience. The application fetches live movie data, tracks user search history for improved usability, and optimizes usability through fuzzy and debounced search handling. The platform delivers a fast, mobile-friendly experience across devices.',
+    date: 'Aug 2025',
+    link: 'https://project-website-final.vercel.app/'
   }
 ])
 
@@ -194,8 +186,11 @@ const handleImageError = (event) => {
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .project-card:hover {
@@ -208,13 +203,26 @@ const handleImageError = (event) => {
   font-weight: 600;
   color: #222;
   margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.project-link {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  color: #555;
+  text-decoration: underline;
 }
 
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
+  justify-content: left;
 }
 
 .tech-tag {
@@ -227,27 +235,30 @@ const handleImageError = (event) => {
 }
 
 .project-description {
-  list-style: none;
+  margin: 0 0 1.5rem 0;
   padding: 0;
-  margin: 0;
-}
-
-.project-description li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #555;
   text-align: left;
+  font-size: 1rem;
 }
 
-.project-description li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #222;
-  font-weight: bold;
-  font-size: 1.2rem;
+.project-card-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+.project-date-bar {
+  background: #f5f5f5;
+  border-top: 1px solid #e0e0e0;
+  padding: 0.75rem 2rem;
+  margin-top: auto;
+}
+
+.project-date {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {

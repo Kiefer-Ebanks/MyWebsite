@@ -47,14 +47,14 @@ const contentItems = ref([
   {
     title: 'Fitness',
     subtitle: 'Here is a photo of my friends and I running a half-marathon!',
-    paragraph: 'I LOVE lifting weights and setting new PRs (I\'m currently chasing the fated 225 Bench). This year I\'m also doing boxing classes, which is a cool way to shake things up and learn a new skill. I\'m also considering running a full marathon this year (but that still sounds a little crazy right now)',
+    paragraph: 'I LOVE lifting weights and setting new PRs (I\'m currently chasing the fated 225 Bench). This year I\'m also doing boxing classes, which is a cool way to shake things up and learn a new skill. I\'m also considering running a full marathon this year (but that still sounds a little crazy).',
     mainImage: '/HalfPic.jpg',
     thumbnail: '/HalfPic.jpg'
   },
   {
     title: 'Home',
     subtitle: 'I am lucky enough to call the Cayman Islands home!',
-    paragraph: 'Cayman is where my family is, and where island life brings a pace and warmth that’s hard to replicate anywhere else. I love the beach, going to my grandma\s house on Sundays, and watching fireworks light up the entire coastline on New Year\'s Eve',
+    paragraph: 'Cayman is where my family is, and where island life brings a pace and warmth that’s hard to replicate anywhere else. I love the beach, going to my grandma\s house on Sundays, and watching fireworks light up the entire coastline on New Year\'s Eve.',
     mainImage: '/FamPic.JPG',
     thumbnail: '/FamPic.JPG'
   },
