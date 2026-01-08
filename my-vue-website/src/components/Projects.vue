@@ -10,7 +10,7 @@
       >
         <div class="project-card-content">
           <h2 class="project-title">
-            <a :href="project.link" :target="project.link ? '_blank' : '_self'" class="project-link">{{ project.title }}</a>
+            <a :href="project.link" :target="project.link ? '_blank' : '_self'" class="project-link" v-html="project.title"></a>
           </h2>
           <p class="project-description">{{ project.description }}</p>
           <div class="tech-stack">
@@ -42,7 +42,7 @@
             class="skill-item"
           >
             <img
-              :src="`https://skill-icons.dev/icons?i=${item.icon}`"
+              :src="getDeviconUrl(item.icon)"
               :alt="item.name"
               class="skill-icon"
               @error="handleImageError"
@@ -61,7 +61,7 @@
             class="skill-item"
           >
             <img
-              :src="`https://skill-icons.dev/icons?i=${item.icon}`"
+              :src="getDeviconUrl(item.icon)"
               :alt="item.name"
               class="skill-icon"
               @error="handleImageError"
@@ -125,7 +125,7 @@ const projects = ref([
     link: ''
   },
   {
-    title: 'TPS Website React Conversion',
+    title: 'TPS Website<br>React Conversion',
     techStack: ['React', 'WordPress'],
     description: 'Description point 3 for project 4',
     date: 'Dec 2025 - Jan 2026',
@@ -139,7 +139,7 @@ const projects = ref([
     link: ''
   },
   {
-    title: 'PhishSchool (BostonHacks Project)',
+    title: 'PhishSchool<br>(BostonHacks 2025)',
     techStack: ['Python', 'React', 'FastAPI', 'Supabase', 'Gemini API', 'Twilio API', 'Node.js', 'Vite', 'Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
     description: 'Developed a full-stack phishing detection and cybersecurity training platform that helps users identify and defend against real-world phishing attacks. The app analyzes suspicious messages and emails using AI-powered detection, and provides interactive training tools for learning. Users can practice through guided lessons, simulated phishing campaigns, and automated feedback.',
     date: 'Oct 2025',
@@ -153,6 +153,47 @@ const projects = ref([
     link: 'https://project-website-final.vercel.app/'
   }
 ])
+
+const getDeviconUrl = (iconName) => {
+  // Map icon names to devicons naming conventions
+  const iconMap = {
+    'js': 'javascript',
+    'ts': 'typescript',
+    'cpp': 'cplusplus',
+    'tailwind': 'tailwindcss',
+    'html': 'html5',
+    'css': 'css3',
+    'nodejs': 'nodejs',
+    'nextjs': 'nextjs',
+    'vue': 'vuejs',
+    'react': 'react',
+    'python': 'python',
+    'go': 'go',
+    'c': 'c',
+    'java': 'java',
+    'git': 'git',
+    'nosql': 'mongodb', // NoSQL might not exist, using mongodb as fallback
+    'fastapi': 'fastapi',
+    'linux': 'linux',
+    'supabase': 'supabase',
+    'vercel': 'vercel',
+    'netlify': 'netlify',
+    'docker': 'docker',
+    'github': 'github',
+    'vite': 'vitejs',
+    'wordpress': 'wordpress',
+    'cursor': 'vscode', // Cursor might not exist, using vscode as fallback
+    'appwrite': 'appwrite',
+    'visualstudio': 'vscode',
+    'latex': 'latex',
+    'jupyter': 'jupyter',
+    'spyder': 'python', // Spyder might not exist, using python as fallback
+    'webstorm': 'webstorm'
+  }
+  
+  const deviconName = iconMap[iconName] || iconName
+  return `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${deviconName}/${deviconName}-original.svg`
+}
 
 const handleImageError = (event) => {
   // Fallback if logo fails to load
