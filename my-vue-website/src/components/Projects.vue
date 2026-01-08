@@ -119,15 +119,15 @@ const toolsAndTechnologies = ref([
 const projects = ref([
   {
     title: 'FormFixer',
-    techStack: ['C++', 'Python', 'PostgreSQL'],
-    description: 'Description point 3 for project 4',
+    techStack: ['C++', 'Go', 'OpenCV'],
+    description: 'Built a real-time workout analysis system that monitors a user’s movements during gym exercises and evaluates form accuracy as the workout is performed. The application provides immediate feedback to help users correct technique and reduce injury risk.',
     date: 'Jan 2026 - Present',
     link: ''
   },
   {
     title: 'TPS Website<br>React Conversion',
     techStack: ['React', 'WordPress'],
-    description: 'Description point 3 for project 4',
+    description: 'Redesigned the Truss Plant Structures business website in React, transforming it from a static, template-based layout into a modern, interactive experience. This improved user experience and client engagement through clearer content structure, intuitive navigation, and engaging visual elements. The new site includes interactive 3D components and integrated email functionality for quicker communication.',
     date: 'Dec 2025 - Jan 2026',
     link: 'https://trussplant.ky/'
   },

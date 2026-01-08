@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar.vue"
 import About from "./components/About.vue"
 import Experience from "./components/Experience.vue"
 import Projects from "./components/Projects.vue"
+import Resume from "./components/Resume.vue"
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import Projects from "./components/Projects.vue"
     <About />
     <Experience />
     <Projects />
+    <Resume />
   </main>
 </template>
 
