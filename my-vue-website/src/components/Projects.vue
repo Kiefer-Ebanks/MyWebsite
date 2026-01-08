@@ -33,7 +33,7 @@
       <p class="skills-intro">
         Here is a short summary of all the languages, frameworks, and tools I've used over my personal projects and coursework:
       </p>
-      <div class="skills-category">
+      <div class="skills-card">
         <h2 class="category-title">Languages & Frameworks</h2>
         <div class="skills-grid">
           <div
@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <div class="skills-category">
+      <div class="skills-card">
         <h2 class="category-title">Tools & Technologies</h2>
         <div class="skills-grid">
           <div
@@ -155,6 +155,17 @@ const projects = ref([
 ])
 
 const getDeviconUrl = (iconName) => {
+  // Special cases for custom icons
+  if (iconName === 'spyder') {
+    return 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Spyder_logo_2021.svg'
+  }
+  if (iconName === 'cursor') {
+    return '/Cursor.svg'
+  }
+  if (iconName === 'nosql') {
+    return '/nosql.png'
+  }
+  
   // Map icon names to devicons naming conventions
   const iconMap = {
     'js': 'javascript',
@@ -172,7 +183,6 @@ const getDeviconUrl = (iconName) => {
     'c': 'c',
     'java': 'java',
     'git': 'git',
-    'nosql': 'mongodb', // NoSQL might not exist, using mongodb as fallback
     'fastapi': 'fastapi',
     'linux': 'linux',
     'supabase': 'supabase',
@@ -182,12 +192,10 @@ const getDeviconUrl = (iconName) => {
     'github': 'github',
     'vite': 'vitejs',
     'wordpress': 'wordpress',
-    'cursor': 'vscode', // Cursor might not exist, using vscode as fallback
     'appwrite': 'appwrite',
     'visualstudio': 'vscode',
     'latex': 'latex',
     'jupyter': 'jupyter',
-    'spyder': 'python', // Spyder might not exist, using python as fallback
     'webstorm': 'webstorm'
   }
   
@@ -325,8 +333,12 @@ const handleImageError = (event) => {
   max-width: 1200px;
 }
 
-.skills-category {
-  margin-bottom: 4rem;
+.skills-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
   max-width: 1200px;
 }
 
@@ -334,7 +346,7 @@ const handleImageError = (event) => {
   font-size: 2rem;
   font-weight: 600;
   color: #222;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
   text-transform: capitalize;
 }
 
@@ -342,7 +354,6 @@ const handleImageError = (event) => {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 1.5rem;
-  max-width: 1200px;
 }
 
 .skill-item {
@@ -350,16 +361,7 @@ const handleImageError = (event) => {
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  padding: 1rem;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.skill-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0;
 }
 
 .skill-icon {
@@ -376,6 +378,10 @@ const handleImageError = (event) => {
 }
 
 @media (max-width: 768px) {
+  .skills-card {
+    padding: 1.5rem;
+  }
+
   .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 1rem;
