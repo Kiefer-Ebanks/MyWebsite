@@ -40,7 +40,7 @@ const contentItems = ref([
   {
     title: 'About Me',
     subtitle: 'Hi there! I\'m Kiefer Ebanks and welcome to my website!',
-    paragraph: 'I\'m currently a Junior Computer Science major at Boston University. As an aspiring software engineer, I\’m especially interested in web development and distributed systems - though I have experience in IT as well. I\’m also creative at heart, which is why I have a minor in Film & Television. Storytelling, visuals, and design all influence how I approach all my projects, CS and film alike. In my free time, I\’m working toward becoming fluent in Spanish and trying to improve my drawing ability.',
+    paragraph: 'I\'m currently a Junior Computer Science major at Boston University. As an aspiring software engineer, I\’m especially interested in full-stack engineering, mainframes, and distributed systems - though I have experience in IT as well. I\’m also creative at heart, which is why I have a minor in Film & Television. In my free time, I\’m working toward becoming fluent in Spanish and trying to improve my drawing ability.',
     mainImage: '/MePic.jpg',
     thumbnail: '/MePic.jpg'
   },
@@ -90,6 +90,12 @@ const selectContent = (index) => {
 .about-section {
   margin-top: 0rem;
   padding: 2rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  contain: layout style;
+  isolation: isolate;
 }
 
 .content-wrapper {
@@ -98,6 +104,11 @@ const selectContent = (index) => {
   gap: 4rem;
   align-items: center;
   margin-bottom: 3rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  contain: layout;
 }
 
 .text-content h1 {
@@ -150,6 +161,18 @@ const selectContent = (index) => {
 
 .text-content .bullet-list li {
   margin-bottom: 0.5rem;
+}
+
+.text-content {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.image-content {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .image-content {

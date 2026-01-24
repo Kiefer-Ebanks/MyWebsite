@@ -80,6 +80,12 @@ const jobs = ref([
 .experience-section {
   margin-top: 6rem;
   padding: 2rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  contain: layout style;
+  isolation: isolate;
 }
 
 .section-title {

@@ -213,6 +213,12 @@ const handleImageError = (event) => {
 .projects-section {
   margin-top: 6rem;
   padding: 2rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  contain: layout style;
+  isolation: isolate;
 }
 
 .section-title {
@@ -222,13 +228,21 @@ const handleImageError = (event) => {
   color: #222;
   text-transform: lowercase;
   letter-spacing: -0.02em;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .project-card {
@@ -240,6 +254,9 @@ const handleImageError = (event) => {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .project-card:hover {
@@ -253,12 +270,21 @@ const handleImageError = (event) => {
   color: #222;
   margin: 0 0 1rem 0;
   text-align: left;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-link {
   color: #222;
   text-decoration: none;
   transition: color 0.2s ease;
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-link:hover {
@@ -272,6 +298,9 @@ const handleImageError = (event) => {
   gap: 0.5rem;
   margin-bottom: 0;
   justify-content: left;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .tech-tag {
@@ -281,6 +310,9 @@ const handleImageError = (event) => {
   border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 500;
+  white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .project-description {
@@ -290,11 +322,21 @@ const handleImageError = (event) => {
   color: #555;
   text-align: left;
   font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-card-content {
   padding: 2rem;
   flex: 1;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-date-bar {
@@ -302,6 +344,9 @@ const handleImageError = (event) => {
   border-top: 1px solid #e0e0e0;
   padding: 0.75rem 2rem;
   margin-top: auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .project-date {
@@ -322,7 +367,9 @@ const handleImageError = (event) => {
 
 .tech-skills-section {
   margin-top: 6rem;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .skills-intro {
@@ -330,7 +377,11 @@ const handleImageError = (event) => {
   line-height: 1.7;
   color: #555;
   margin-bottom: 3rem;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .skills-card {
@@ -339,7 +390,9 @@ const handleImageError = (event) => {
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .category-title {
@@ -348,12 +401,20 @@ const handleImageError = (event) => {
   color: #222;
   margin: 0 0 2rem 0;
   text-transform: capitalize;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .skill-item {
@@ -362,6 +423,9 @@ const handleImageError = (event) => {
   align-items: center;
   gap: 0.75rem;
   padding: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .skill-icon {
@@ -375,6 +439,11 @@ const handleImageError = (event) => {
   color: #555;
   text-align: center;
   font-weight: 500;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 @media (max-width: 768px) {
