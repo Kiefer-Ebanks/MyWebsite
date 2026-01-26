@@ -101,7 +101,7 @@ const selectContent = (index) => {
 .content-wrapper {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 4rem;
+  gap: 0rem;
   align-items: center;
   margin-bottom: 3rem;
   width: 100%;

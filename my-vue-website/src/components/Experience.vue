@@ -101,6 +101,7 @@ const jobs = ref([
   position: relative;
   padding-left: 3rem;
   max-width: 800px;
+  margin: 0 auto;
 }
 
 .timeline::before {
