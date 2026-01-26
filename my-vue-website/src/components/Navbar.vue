@@ -1,6 +1,6 @@
 <template>
   <header class="navbar">
-    <div class="name">Kiefer Ebanks</div>
+    <a href="#about" @click="scrollToSection" class="name">Kiefer Ebanks</a>
     <nav class="nav-links">
       <a href="#about" @click="scrollToSection">About</a>
       <a href="#experience" @click="scrollToSection">Experience</a>
@@ -45,6 +45,13 @@ const scrollToSection = (event) => {
   font-weight: 600;
   color: white;
   white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.name:hover {
+  opacity: 0.8;
 }
 
 .nav-links {
