@@ -1,5 +1,6 @@
 <template>
   <header class="navbar">
+    <div class="name">Kiefer Ebanks</div>
     <nav class="nav-links">
       <a href="#about" @click="scrollToSection">About</a>
       <a href="#experience" @click="scrollToSection">Experience</a>
@@ -33,10 +34,17 @@ const scrollToSection = (event) => {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  justify-content: space-between;
+  padding: 1rem 15rem;
   z-index: 100;
   box-sizing: border-box;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -44,7 +52,7 @@ const scrollToSection = (event) => {
   gap: 1.5rem;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  margin-left: auto;
 }
 
 .nav-links a {
@@ -61,6 +69,14 @@ const scrollToSection = (event) => {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  
+  .name {
+    font-size: 1rem;
+  }
+  
   .nav-links {
     gap: 1rem;
   }
