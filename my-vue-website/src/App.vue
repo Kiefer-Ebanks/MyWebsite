@@ -5,6 +5,7 @@ import Experience from "./components/Experience.vue"
 import Projects from "./components/Projects.vue"
 import Resume from "./components/Resume.vue"
 import Creativity from "./components/Creativity.vue"
+import Contact from "./components/Contact.vue"
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import Creativity from "./components/Creativity.vue"
     <Projects />
     <Resume />
      <Creativity />
+    <Contact />
   </main>
 </template>
 
