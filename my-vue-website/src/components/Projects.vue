@@ -1,5 +1,5 @@
 <template>
-  <section id="projects2" class="projects-section">
+  <section id="projects" class="projects-section">
     <h1 class="section-title">projects.</h1>
     
     <div class="projects-container">
@@ -150,7 +150,7 @@ const projects = ref([
   },
   {
     title: 'This Website',
-    image: '',
+    image: '/projects/website.jpg',
     techStack: ['Vue','Vite', 'Netlify', 'CSS'],
     description: 'A personal portfolio showcasing my projects, skills, and interests. Built as a space to explore my work and the ideas I enjoy building.',
     date: 'Jan 2026',
@@ -261,7 +261,8 @@ const handleImageError = (event) => {
   box-sizing: border-box;
   min-width: 0;
   display: block;
-  overflow: hidden;
+  overflow: visible;
+  margin-top: 1rem;
 }
 
 .projects-grid {
@@ -275,6 +276,7 @@ const handleImageError = (event) => {
   /* Prevent grid from creating implicit tracks that expand container */
   grid-auto-flow: row;
   grid-auto-columns: minmax(0, 1fr);
+  padding-top: 0.5rem;
 }
 
 .project-card {
@@ -290,11 +292,14 @@ const handleImageError = (event) => {
   max-width: 100%;
   box-sizing: border-box;
   min-width: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(5, 32, 74, 0.2);
+  z-index: 10;
 }
 
 .project-card-content {
@@ -392,8 +397,8 @@ const handleImageError = (event) => {
 }
 
 .project-date-bar {
-  background:rgb(191, 191, 191);
-  border-top: 1px solid #7a7978;
+  background:rgb(208, 207, 207);
+  border-top: 0.5px solid #7a7978;
   padding: 0.75rem 2rem;
   margin-top: auto;
   width: 100%;

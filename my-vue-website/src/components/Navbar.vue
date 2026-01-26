@@ -41,7 +41,7 @@ const scrollToSection = (event) => {
 }
 
 .name {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #fdf7fa;
   white-space: nowrap;

@@ -3,7 +3,7 @@
     <div class="content-wrapper">
       <div class="text-content">
         <h1>contact me.</h1>
-        <p>Please feel free to reach out to me by email or linkedin and check out my github.</p>
+        <p>Please feel free to reach out to me over Email or Linkedin, and check out my Github!</p>
       </div>
 
       <div class="contact-links">

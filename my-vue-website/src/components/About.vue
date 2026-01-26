@@ -40,14 +40,14 @@ const contentItems = ref([
   {
     title: 'About Me',
     subtitle: 'Hi there! I\'m Kiefer Ebanks and welcome to my website!',
-    paragraph: 'I\'m currently a Junior Computer Science major at Boston University. As an aspiring software engineer, I\’m especially interested in full-stack engineering, mainframes, and distributed systems - though I have experience in IT as well. I\’m also creative at heart, which is why I have a minor in Film & Television. In my free time, I\’m working toward becoming fluent in Spanish and trying to improve my drawing ability.',
+    paragraph: 'I\'m currently a Junior Computer Science major at Boston University. As an aspiring software engineer, I\’m especially interested in full-stack engineering, mainframes, and distributed systems - though I have experience in IT as well. I\’m also creative at heart, which is why I have a minor in Film & Television. In my free time, I\’m working toward becoming fluent in Spanish and improving my drawing ability.',
     mainImage: '/MePic.jpg',
     thumbnail: '/MePic.jpg'
   },
   {
     title: 'Fitness',
-    subtitle: 'Here is a photo of my friends and I running a half-marathon!',
-    paragraph: 'I LOVE lifting weights and setting new PRs (I\'m currently chasing the fated 225 Bench). This year I\'m also doing boxing classes, which is a cool way to shake things up and learn a new skill. I\'m also considering running a full marathon this year (but that still sounds a little crazy).',
+    subtitle: 'Here\'s a photo of my friends and I running a half-marathon!',
+    paragraph: 'I LOVE lifting weights and setting new PRs (I\'m currently chasing the fated 225 Bench). This year I\'m also doing boxing classes, which is a cool way to shake things up and learn a new skill. I\'m also considering running a full marathon this year (but that still sounds a little crazy)!',
     mainImage: '/HalfPic.jpg',
     thumbnail: '/HalfPic.jpg'
   },
@@ -55,8 +55,8 @@ const contentItems = ref([
     title: 'Home',
     subtitle: 'I am lucky enough to call the Cayman Islands home!',
     paragraph: 'Cayman is where my family is, and where island life brings a pace and warmth that’s hard to replicate anywhere else. I love the beach, going to my grandma\s house on Sundays, and watching fireworks light up the entire coastline on New Year\'s Eve.',
-    mainImage: '/FamPic.JPG',
-    thumbnail: '/FamPic.JPG'
+    mainImage: '/BeachPic.JPG',
+    thumbnail: '/BeachPic.JPG'
   },
   {
     title: 'Film',
