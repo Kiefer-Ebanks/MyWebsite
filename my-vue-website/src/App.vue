@@ -13,7 +13,7 @@ import Contact from "./components/Contact.vue"
   <main>
     <About />
     <Experience />
-    <Projects />
+    
     <Resume />
      <Creativity />
     <Contact />

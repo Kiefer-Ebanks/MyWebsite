@@ -10,9 +10,22 @@
       >
         <div class="project-card-content">
           <h2 class="project-title">
-            <a :href="project.link" :target="project.link ? '_blank' : '_self'" class="project-link" v-html="project.title"></a>
+            <a 
+              v-if="project.link" 
+              :href="project.link" 
+              target="_blank" 
+              class="project-link" 
+              v-html="project.title"
+            ></a>
+            <span v-else v-html="project.title"></span>
           </h2>
+          
+          <div class="project-image-wrapper" v-if="project.image">
+            <img :src="project.image" :alt="project.title" class="project-image" />
+          </div>
+          
           <p class="project-description">{{ project.description }}</p>
+          
           <div class="tech-stack">
             <span
               v-for="(tech, techIndex) in project.techStack"
@@ -23,6 +36,7 @@
             </span>
           </div>
         </div>
+        
         <div class="project-date-bar">
           <span class="project-date">{{ project.date }}</span>
         </div>
@@ -113,19 +127,20 @@ const toolsAndTechnologies = ref([
   { name: 'Jupyter', icon: 'jupyter' },
   { name: 'Spyder', icon: 'spyder' },
   { name: 'Webstorm', icon: 'webstorm' }
-
 ])
 
 const projects = ref([
   {
     title: 'FormFixer',
+    image: '/projects/opencv.jpg',
     techStack: ['C++', 'Go', 'OpenCV'],
-    description: 'Built a real-time workout analysis system that monitors a user’s movements during gym exercises and evaluates form accuracy as the workout is performed. The application provides immediate feedback to help users correct technique and reduce injury risk.',
+    description: 'Built a real-time workout analysis system that monitors a user\'s movements during gym exercises and evaluates form accuracy as the workout is performed. The application provides immediate feedback to help users correct technique and reduce injury risk.',
     date: 'Jan 2026 - Present',
     link: ''
   },
   {
     title: 'TPS Website<br>React Conversion',
+    image: '/projects/Trussplant.jpg',
     techStack: ['React', 'WordPress'],
     description: 'Redesigned the Truss Plant Structures business website in React, transforming it from a static, template-based layout into a modern, interactive experience. This improved user experience and client engagement through clearer content structure, intuitive navigation, and engaging visual elements. The new site includes interactive 3D components and integrated email functionality for quicker communication.',
     date: 'Dec 2025 - Jan 2026',
@@ -133,6 +148,7 @@ const projects = ref([
   },
   {
     title: 'This Website',
+    image: '',
     techStack: ['Vue','Vite', 'Netlify', 'CSS'],
     description: 'A personal portfolio showcasing my projects, skills, and interests. Built as a space to explore my work and the ideas I enjoy building.',
     date: 'Jan 2026',
@@ -140,6 +156,7 @@ const projects = ref([
   },
   {
     title: 'PhishSchool<br>(BostonHacks 2025)',
+    image: '/projects/phish.jpg', 
     techStack: ['Python', 'React', 'FastAPI', 'Supabase', 'Gemini API', 'Twilio API', 'Node.js', 'Vite', 'Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
     description: 'Developed a full-stack phishing detection and cybersecurity training platform that helps users identify and defend against real-world phishing attacks. The app analyzes suspicious messages and emails using AI-powered detection, and provides interactive training tools for learning. Users can practice through guided lessons, simulated phishing campaigns, and automated feedback.',
     date: 'Oct 2025',
@@ -147,6 +164,7 @@ const projects = ref([
   },
   {
     title: 'Movie Search Web App',
+    image: '/projects/movies.jpg',
     techStack: ['React', 'TailwindCSS', 'Docker', 'Node.js', 'Vite', 'Next.js', 'TypeScript', 'Vercel', 'NoSQL'],
     description: 'Built a dynamic movie discovery platform that allows users to search for films in real time, explore trending titles, and enjoy a smooth, responsive browsing experience. The application fetches live movie data, tracks user search history for improved usability, and optimizes usability through fuzzy and debounced search handling. The platform delivers a fast, mobile-friendly experience across devices.',
     date: 'Aug 2025',
@@ -264,11 +282,21 @@ const handleImageError = (event) => {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
+.project-card-content {
+  padding: 2rem;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
 .project-title {
   font-size: 1.5rem;
   font-weight: 600;
   color: #222;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
   text-align: left;
   width: 100%;
   max-width: 100%;
@@ -292,6 +320,35 @@ const handleImageError = (event) => {
   text-decoration: underline;
 }
 
+.project-image-wrapper {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.project-description {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  line-height: 1.7;
+  color: #555;
+  text-align: left;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -313,30 +370,6 @@ const handleImageError = (event) => {
   white-space: nowrap;
   max-width: 100%;
   box-sizing: border-box;
-}
-
-.project-description {
-  margin: 0 0 1.5rem 0;
-  padding: 0;
-  line-height: 1.7;
-  color: #555;
-  text-align: left;
-  font-size: 1rem;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-.project-card-content {
-  padding: 2rem;
-  flex: 1;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
 }
 
 .project-date-bar {
@@ -370,6 +403,9 @@ const handleImageError = (event) => {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
+  contain: layout style;
+  isolation: isolate;
 }
 
 .skills-intro {
@@ -393,6 +429,8 @@ const handleImageError = (event) => {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
+  contain: layout style;
 }
 
 .category-title {
@@ -415,6 +453,7 @@ const handleImageError = (event) => {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  min-width: 0;
 }
 
 .skill-item {
@@ -426,12 +465,14 @@ const handleImageError = (event) => {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  min-width: 0;
 }
 
 .skill-icon {
   width: 48px;
   height: 48px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .skill-name {
@@ -466,4 +507,3 @@ const handleImageError = (event) => {
   }
 }
 </style>
-
