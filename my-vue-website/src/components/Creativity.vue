@@ -109,7 +109,7 @@ const photos = ref([
 
 <style scoped>
 .creativity-section {
-  margin-top: 6rem;
+  margin-top: 2rem;
   padding: 2rem 0;
   width: 100%;
   max-width: 100%;

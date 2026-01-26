@@ -1,48 +1,48 @@
 <template>
-  <section id="projects" class="projects-section">
+  <section id="projects2" class="projects-section">
     <h1 class="section-title">projects.</h1>
     
     <div class="projects-container">
       <div class="projects-grid">
-      <div
-        v-for="(project, index) in projects"
-        :key="index"
-        class="project-card"
-      >
-        <div class="project-card-content">
-          <h2 class="project-title">
-            <a 
-              v-if="project.link" 
-              :href="project.link" 
-              target="_blank" 
-              class="project-link" 
-              v-html="project.title"
-            ></a>
-            <span v-else v-html="project.title"></span>
-          </h2>
-          
-          <div class="project-image-wrapper" v-if="project.image">
-            <img :src="project.image" :alt="project.title" class="project-image" />
+        <div
+          v-for="(project, index) in projects"
+          :key="index"
+          class="project-card"
+        >
+          <div class="project-card-content">
+            <h2 class="project-title">
+              <a 
+                v-if="project.link" 
+                :href="project.link" 
+                target="_blank" 
+                class="project-link" 
+                v-html="project.title"
+              ></a>
+              <span v-else v-html="project.title"></span>
+            </h2>
+            
+            <div class="project-image-wrapper" v-if="project.image">
+              <img :src="project.image" :alt="project.title" class="project-image" />
+            </div>
+            
+            <p class="project-description">{{ project.description }}</p>
+            
+            <div class="tech-stack">
+              <span
+                v-for="(tech, techIndex) in project.techStack"
+                :key="techIndex"
+                class="tech-tag"
+              >
+                {{ tech }}
+              </span>
+            </div>
           </div>
           
-          <p class="project-description">{{ project.description }}</p>
-          
-          <div class="tech-stack">
-            <span
-              v-for="(tech, techIndex) in project.techStack"
-              :key="techIndex"
-              class="tech-tag"
-            >
-              {{ tech }}
-            </span>
+          <div class="project-date-bar">
+            <span class="project-date">{{ project.date }}</span>
           </div>
-        </div>
-        
-        <div class="project-date-bar">
-          <span class="project-date">{{ project.date }}</span>
         </div>
       </div>
-    </div>
     </div>
 
     <div class="tech-skills-section">
@@ -231,7 +231,7 @@ const handleImageError = (event) => {
 
 <style scoped>
 .projects-section {
-  margin-top: 6rem;
+  margin-top: 1rem;
   padding: 2rem 0;
   width: 100%;
   max-width: 100%;
@@ -257,24 +257,24 @@ const handleImageError = (event) => {
 
 .projects-container {
   width: 100%;
-  /* Constrain width to match About content-wrapper visual alignment */
-  /* Both sections share same main container, so we limit projects width */
-  /* This ensures projects cards align with About image right edge */
   max-width: 100%;
   box-sizing: border-box;
   min-width: 0;
+  display: block;
+  overflow: hidden;
 }
 
 .projects-grid {
   display: grid;
-  /* Smaller minmax value creates narrower cards */
-  /* This helps constrain overall grid width to align with About image */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   min-width: 0;
+  /* Prevent grid from creating implicit tracks that expand container */
+  grid-auto-flow: row;
+  grid-auto-columns: minmax(0, 1fr);
 }
 
 .project-card {
@@ -289,6 +289,7 @@ const handleImageError = (event) => {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  min-width: 0;
 }
 
 .project-card:hover {
@@ -304,6 +305,7 @@ const handleImageError = (event) => {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .project-title {
@@ -339,6 +341,7 @@ const handleImageError = (event) => {
   margin-bottom: 1.5rem;
   max-width: 100%;
   box-sizing: border-box;
+  min-width: 0;
 }
 
 .project-image {
@@ -361,6 +364,7 @@ const handleImageError = (event) => {
   box-sizing: border-box;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  flex: 1;
 }
 
 .tech-stack {
@@ -368,7 +372,7 @@ const handleImageError = (event) => {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 0;
-  justify-content: left;
+  justify-content: flex-start;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -400,16 +404,6 @@ const handleImageError = (event) => {
   font-size: 0.9rem;
   color: #666;
   font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 3rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .tech-skills-section {
@@ -444,7 +438,6 @@ const handleImageError = (event) => {
   max-width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
-  contain: layout style;
 }
 
 .category-title {
@@ -462,7 +455,8 @@ const handleImageError = (event) => {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  /* Use auto-fill with minmax to naturally constrain width */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 1.5rem;
   width: 100%;
   max-width: 100%;
@@ -502,12 +496,20 @@ const handleImageError = (event) => {
 }
 
 @media (max-width: 768px) {
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
   .skills-card {
     padding: 1.5rem;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 1rem;
   }
 

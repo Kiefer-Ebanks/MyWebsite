@@ -21,7 +21,7 @@ const resumePath = ref('/Kiefer_Ebanks_Resume.pdf')
 
 <style scoped>
 .resume-section {
-  margin-top: 6rem;
+  margin-top: 1rem;
   padding: 2rem 0;
 }
 

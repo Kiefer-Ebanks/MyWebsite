@@ -78,7 +78,7 @@ const jobs = ref([
 
 <style scoped>
 .experience-section {
-  margin-top: 6rem;
+  margin-top: 3rem;
   padding: 2rem 0;
   width: 100%;
   max-width: 100%;
