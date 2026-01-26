@@ -115,7 +115,7 @@ const selectContent = (index) => {
   font-size: 5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #222;
+  color: #02020a;
   text-transform: lowercase;
   letter-spacing: -0.02em;
   min-height: 6rem;
@@ -126,7 +126,7 @@ const selectContent = (index) => {
 .text-content h2 {
   font-weight: 400;
   font-size: 1.25rem;
-  color: #666;
+  color: #7a7978;
   max-width: 500px;
   margin-bottom: 0;
   line-height: 1.5;
@@ -140,7 +140,7 @@ const selectContent = (index) => {
 .text-content p {
   margin-top: 2rem;
   line-height: 1.7;
-  color: #555;
+  color: #7a7978;
   max-width: 500px;
   font-size: 1rem;
   min-height: 8rem;
@@ -151,7 +151,7 @@ const selectContent = (index) => {
   margin-top: 2rem;
   padding-left: 0;
   list-style-position: inside;
-  color: #555;
+  color: #7a7978;
   max-width: 500px;
   font-size: 1rem;
   line-height: 1.7;
@@ -192,7 +192,7 @@ const selectContent = (index) => {
   width: 80%;
   max-width: 800px;
   height: 1px;
-  background: #e0e0e0;
+  background: #7a7978;
   margin: 3rem auto 2rem;
 }
 

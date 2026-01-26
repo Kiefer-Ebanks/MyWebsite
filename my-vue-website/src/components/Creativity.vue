@@ -121,7 +121,7 @@ const photos = ref([
   font-size: 5rem;
   font-weight: 600;
   margin-bottom: 4rem;
-  color: #222;
+  color: #02020a;
   text-transform: lowercase;
   letter-spacing: -0.02em;
 }
@@ -146,7 +146,7 @@ const photos = ref([
 .videos-title {
   font-size: 3rem;
   font-weight: 300;
-  color: #888;
+  color: #7a7978;
   margin: 0;
   text-transform: capitalize;
   line-height: 1.2;
@@ -172,17 +172,17 @@ const photos = ref([
 }
 
 .videos-container::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: #eef1ef;
   border-radius: 4px;
 }
 
 .videos-container::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: #7a7978;
   border-radius: 4px;
 }
 
 .videos-container::-webkit-scrollbar-thumb:hover {
-  background: #999;
+  background: #05204a;
 }
 
 .video-thumbnail {
@@ -200,7 +200,7 @@ const photos = ref([
 
 .video-thumbnail:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(5, 32, 74, 0.3);
 }
 
 .video-thumbnail img {
@@ -297,7 +297,7 @@ const photos = ref([
 .photos-title {
   font-size: 3rem;
   font-weight: 300;
-  color: #888;
+  color: #7a7978;
   margin: 0;
   text-transform: capitalize;
   line-height: 1.2;
@@ -323,17 +323,17 @@ const photos = ref([
 }
 
 .photos-container::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: #eef1ef;
   border-radius: 4px;
 }
 
 .photos-container::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: #7a7978;
   border-radius: 4px;
 }
 
 .photos-container::-webkit-scrollbar-thumb:hover {
-  background: #999;
+  background: #05204a;
 }
 
 .photo-item {
@@ -349,7 +349,7 @@ const photos = ref([
 
 .photo-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(5, 32, 74, 0.3);
 }
 
 .photo-item img {

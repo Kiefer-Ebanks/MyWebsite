@@ -30,7 +30,8 @@ html {
 body {
   margin: 0;
   font-family: Inter, system-ui, sans-serif;
-  color: #222;
+  color: #02020a;
+  background-color:rgb(255, 255, 255);
   overflow-x: hidden;
   width: 100%;
   box-sizing: border-box;

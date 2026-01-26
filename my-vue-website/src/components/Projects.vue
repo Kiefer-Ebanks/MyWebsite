@@ -134,7 +134,7 @@ const toolsAndTechnologies = ref([
 const projects = ref([
   {
     title: 'FormFixer',
-    image: '/projects/opencv.jpg',
+    image: '',
     techStack: ['C++', 'Go', 'OpenCV'],
     description: 'Built a real-time workout analysis system that monitors a user\'s movements during gym exercises and evaluates form accuracy as the workout is performed. The application provides immediate feedback to help users correct technique and reduce injury risk.',
     date: 'Jan 2026 - Present',
@@ -245,7 +245,7 @@ const handleImageError = (event) => {
   font-size: 5rem;
   font-weight: 600;
   margin-bottom: 4rem;
-  color: #222;
+  color: #02020a;
   text-transform: lowercase;
   letter-spacing: -0.02em;
   width: 100%;
@@ -278,8 +278,8 @@ const handleImageError = (event) => {
 }
 
 .project-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
+  background: #eef1ef;
+  border: 1px solid #7a7978;
   border-radius: 12px;
   padding: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -294,7 +294,7 @@ const handleImageError = (event) => {
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(5, 32, 74, 0.2);
 }
 
 .project-card-content {
@@ -311,7 +311,7 @@ const handleImageError = (event) => {
 .project-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #222;
+  color: #02020a;
   margin: 0 0 1.5rem 0;
   text-align: left;
   width: 100%;
@@ -322,7 +322,7 @@ const handleImageError = (event) => {
 }
 
 .project-link {
-  color: #222;
+  color: #05204a;
   text-decoration: none;
   transition: color 0.2s ease;
   display: inline-block;
@@ -332,7 +332,7 @@ const handleImageError = (event) => {
 }
 
 .project-link:hover {
-  color: #555;
+  color: #05204a;
   text-decoration: underline;
 }
 
@@ -356,7 +356,7 @@ const handleImageError = (event) => {
   margin: 0 0 1.5rem 0;
   padding: 0;
   line-height: 1.7;
-  color: #555;
+  color: #7a7978;
   text-align: left;
   font-size: 1rem;
   width: 100%;
@@ -379,8 +379,8 @@ const handleImageError = (event) => {
 }
 
 .tech-tag {
-  background: #f0f0f0;
-  color: #555;
+  background: #fdf7fa;
+  color: #7a7978;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   font-size: 0.85rem;
@@ -388,11 +388,12 @@ const handleImageError = (event) => {
   white-space: nowrap;
   max-width: 100%;
   box-sizing: border-box;
+  border: 1px solid #7a7978;
 }
 
 .project-date-bar {
-  background: #f5f5f5;
-  border-top: 1px solid #e0e0e0;
+  background:rgb(191, 191, 191);
+  border-top: 1px solid #7a7978;
   padding: 0.75rem 2rem;
   margin-top: auto;
   width: 100%;
@@ -402,7 +403,7 @@ const handleImageError = (event) => {
 
 .project-date {
   font-size: 0.9rem;
-  color: #666;
+  color: #7a7978;
   font-weight: 500;
 }
 
@@ -419,7 +420,7 @@ const handleImageError = (event) => {
 .skills-intro {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #555;
+  color: #7a7978;
   margin-bottom: 3rem;
   width: 100%;
   max-width: 100%;
@@ -429,8 +430,8 @@ const handleImageError = (event) => {
 }
 
 .skills-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
+  background: #eef1ef;
+  border: 1px solid #7a7978;
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -443,7 +444,7 @@ const handleImageError = (event) => {
 .category-title {
   font-size: 2rem;
   font-weight: 600;
-  color: #222;
+  color: #02020a;
   margin: 0 0 2rem 0;
   text-transform: capitalize;
   width: 100%;
@@ -485,7 +486,7 @@ const handleImageError = (event) => {
 
 .skill-name {
   font-size: 0.9rem;
-  color: #555;
+  color: #7a7978;
   text-align: center;
   font-weight: 500;
   width: 100%;

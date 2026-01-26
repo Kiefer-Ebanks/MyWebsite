@@ -92,7 +92,7 @@ const jobs = ref([
   font-size: 5rem;
   font-weight: 600;
   margin-bottom: 4rem;
-  color: #222;
+  color: #02020a;
   text-transform: lowercase;
   letter-spacing: -0.02em;
 }
@@ -111,7 +111,7 @@ const jobs = ref([
   top: 0;
   bottom: 0;
   width: 2px;
-  background: #ddd;
+  background: #7a7978;
 }
 
 .timeline-item {
@@ -126,9 +126,9 @@ const jobs = ref([
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #222;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 2px #222;
+  background: #05204a;
+  border: 2px solid #fdf7fa;
+  box-shadow: 0 0 0 2px #05204a;
   z-index: 1;
 }
 
@@ -147,18 +147,18 @@ const jobs = ref([
 .company-name {
   font-size: 1.5rem;
   font-weight: 600;
-  color: black;
+  color: #02020a;
   margin: 0;
 }
 
 .job-location {
   font-size: 0.95rem;
-  color: #888;
+  color: #7a7978;
 }
 
 .job-title {
   font-size: 1rem;
-  color: #666;
+  color: #7a7978;
   font-style: italic;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
@@ -167,7 +167,7 @@ const jobs = ref([
 
 .job-date {
   font-size: 0.9rem;
-  color: #999;
+  color: #7a7978;
   margin-left: auto;
 }
 
@@ -182,7 +182,7 @@ const jobs = ref([
   padding-left: 1.5rem;
   margin-bottom: 0.75rem;
   line-height: 1.6;
-  color: #555;
+  color: #7a7978;
   text-align: left;
 }
 
@@ -190,7 +190,7 @@ const jobs = ref([
   content: '•';
   position: absolute;
   left: 0;
-  color: black;
+  color: #05204a;
   font-weight: bold;
   font-size: 1.2rem;
 }

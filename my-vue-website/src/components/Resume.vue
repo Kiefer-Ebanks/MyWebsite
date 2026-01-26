@@ -29,7 +29,7 @@ const resumePath = ref('/Kiefer_Ebanks_Resume.pdf')
   font-size: 5rem;
   font-weight: 600;
   margin-bottom: 4rem;
-  color: #222;
+  color: #02020a;
   text-transform: lowercase;
   letter-spacing: -0.02em;
 }
@@ -47,7 +47,7 @@ const resumePath = ref('/Kiefer_Ebanks_Resume.pdf')
   height: 1200px;
   border: none;
   display: block;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(5, 32, 74, 0.2);
   border-radius: 8px;
 }
 

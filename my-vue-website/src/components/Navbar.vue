@@ -30,8 +30,8 @@ const scrollToSection = (event) => {
   left: 0;
   right: 0;
   width: 100%;
-  background: #000;
-  color: white;
+  background: #05204a;
+  color: #fdf7fa;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,7 +43,7 @@ const scrollToSection = (event) => {
 .name {
   font-size: 1.2rem;
   font-weight: 600;
-  color: white;
+  color: #fdf7fa;
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
@@ -63,7 +63,7 @@ const scrollToSection = (event) => {
 }
 
 .nav-links a {
-  color: #aaa;
+  color: #eef1ef;
   text-decoration: none;
   text-transform: capitalize;
   font-size: 0.95rem;
@@ -72,7 +72,7 @@ const scrollToSection = (event) => {
 }
 
 .nav-links a:hover {
-  color: white;
+  color: #fdf7fa;
 }
 
 @media (max-width: 768px) {

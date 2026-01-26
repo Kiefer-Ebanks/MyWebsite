@@ -83,7 +83,7 @@
   font-size: 5rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: #222;
+  color: #02020a;
   text-transform: lowercase;
   letter-spacing: -0.02em;
   display: flex;
@@ -95,7 +95,7 @@
 .text-content p {
   margin-top: 0;
   line-height: 1.7;
-  color: #555;
+  color: #7a7978;
   max-width: 500px;
   font-size: 1rem;
   text-align: left;
@@ -114,7 +114,7 @@
   align-items: center;
   gap: 1rem;
   text-decoration: none;
-  color: #222;
+  color: #05204a;
   transition: opacity 0.3s ease;
   cursor: pointer;
 }
@@ -135,12 +135,12 @@
 .icon {
   width: 100%;
   height: 100%;
-  color: #222;
+  color: #05204a;
 }
 
 .contact-name {
   font-size: 1rem;
-  color: #222;
+  color: #05204a;
   font-weight: 400;
 }
 
