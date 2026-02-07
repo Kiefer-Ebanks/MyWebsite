@@ -10,12 +10,12 @@
       >
         <div class="timeline-marker"></div>
         <div class="timeline-content">
+          <h2 class="job-title">{{ job.title }}</h2>
           <div class="job-header">
-            <h2 class="company-name">{{ job.company }}</h2>
+            <span class="company-name">{{ job.company }}</span>
             <span class="job-location">{{ job.location }}</span>
             <span class="job-date">{{ job.date }}</span>
           </div>
-          <div class="job-title">{{ job.title }}</div>
           <ul class="job-description">
             <li v-for="(point, pointIndex) in job.description" :key="pointIndex">
               {{ point }}
@@ -37,7 +37,7 @@ const jobs = ref([
     title: 'Course Assistant',
     date: 'Sep - Dec 2025',
     description: [
-      'Lead 370+ students to master Python and programming fundamentals for CS111 through labs and office hours.',
+      'Lead 370+ students to master Python, Go, and Distributed Systems for CS111 and CS351 through labs and office hours.',
       'Adapt teaching styles to maximize student engagement and encourage problem solving and collaboration.'
     ]
   },
@@ -136,6 +136,14 @@ const jobs = ref([
   margin-left: 0;
 }
 
+.job-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #02020a;
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+}
+
 .job-header {
   margin-bottom: 1rem;
   display: flex;
@@ -145,24 +153,14 @@ const jobs = ref([
 }
 
 .company-name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #02020a;
-  margin: 0;
+  font-size: 1rem;
+  color: #7a7978;
+  font-style: italic;
 }
 
 .job-location {
   font-size: 0.95rem;
   color: #7a7978;
-}
-
-.job-title {
-  font-size: 1rem;
-  color: #7a7978;
-  font-style: italic;
-  margin-bottom: 1rem;
-  margin-top: 0.5rem;
-  text-align: left;
 }
 
 .job-date {
