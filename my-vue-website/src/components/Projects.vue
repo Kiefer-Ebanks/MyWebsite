@@ -151,8 +151,8 @@ const projects = ref([
   {
     title: 'This Website',
     image: '/projects/website.jpg',
-    techStack: ['Vue','Vite', 'Netlify', 'CSS'],
-    description: 'A personal portfolio showcasing my projects, skills, and interests. Built as a space to explore my work and the ideas I enjoy building.',
+    techStack: ['Vue', 'JavaScript', 'Vite', 'Netlify', 'CSS', 'HTML'],
+    description: 'A personal portfolio showcasing my projects, skills, and interests. Built with Vue as a space to explore my work and the ideas I enjoy building.',
     date: 'Jan 2026',
     link: ''
   },
@@ -280,7 +280,7 @@ const handleImageError = (event) => {
 }
 
 .project-card {
-  background: #eef1ef;
+  background: #ffffff;
   border: 1px solid #7a7978;
   border-radius: 12px;
   padding: 0;
@@ -316,7 +316,7 @@ const handleImageError = (event) => {
 .project-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #02020a;
+  color: #05204a;
   margin: 0 0 1.5rem 0;
   text-align: left;
   width: 100%;
@@ -377,15 +377,15 @@ const handleImageError = (event) => {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 0;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
 }
 
 .tech-tag {
-  background: #fdf7fa;
-  color: #7a7978;
+  background: #eef1ef;
+  color: #02020a;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   font-size: 0.85rem;
@@ -397,7 +397,7 @@ const handleImageError = (event) => {
 }
 
 .project-date-bar {
-  background:rgb(208, 207, 207);
+  background: #1a1a1a;
   border-top: 0.5px solid #7a7978;
   padding: 0.75rem 2rem;
   margin-top: auto;
@@ -408,7 +408,7 @@ const handleImageError = (event) => {
 
 .project-date {
   font-size: 0.9rem;
-  color: #7a7978;
+  color: #fdf7fa;
   font-weight: 500;
 }
 
