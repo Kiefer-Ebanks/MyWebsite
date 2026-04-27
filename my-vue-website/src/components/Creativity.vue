@@ -47,22 +47,22 @@ import { ref } from 'vue'
 const videos = ref([
   {
     title: 'Out of Reach',
-    thumbnail: '/videos/OutOfReachThumbnail.jpg',
+    thumbnail: '/videos/OutOfReachThumbnail.webp',
     link: 'https://youtu.be/xIDLjdJncNE'
   },
   {
     title: 'Berrick\'s Cure',
-    thumbnail: '/videos/Berrick\'sCureThumbnail.jpg',
+    thumbnail: '/videos/Berrick\'sCureThumbnail.webp',
     link: 'https://youtu.be/7hEUpT72v-Q'
   },
   {
     title: 'Don\'t Skip Class',
-    thumbnail: '/videos/ClassThumbnail.jpg',
+    thumbnail: '/videos/ClassThumbnail.webp',
     link: 'https://youtu.be/h5e5o-IDkX0'
   },
   {
     title: 'Madison\'s Half-Marathon Journey',
-    thumbnail: '/videos/MadisonThumbnail.jpg',
+    thumbnail: '/videos/MadisonThumbnail.webp',
     link: 'https://youtu.be/dG6M8AEzxeU'
   }
 ])
@@ -70,39 +70,39 @@ const videos = ref([
 const photos = ref([
   {
     title: 'Contrasting Leaves',
-    image: '/photos/Opposite.jpg'
+    image: '/photos/Opposite.webp'
   },
   {
     title: 'Hexagon',
-    image: '/photos/Hexagon.jpg'
+    image: '/photos/Hexagon.webp'
   },
   {
     title: 'Car',
-    image: '/photos/Practical1.jpg'
+    image: '/photos/Practical1.webp'
   },
   {
     title: 'Wet Leaves',
-    image: '/photos/Geometric2.jpg'
+    image: '/photos/Geometric2.webp'
   },
   {
     title: 'Warm Temperature',
-    image: '/photos/Warm.jpg'
+    image: '/photos/Warm.webp'
   },
   {
     title: 'Red and Green',
-    image: '/photos/RedandGreen.jpg'
+    image: '/photos/RedandGreen.webp'
   },
   {
     title: 'Light Modeling',
-    image: '/photos/Practical2.jpg'
+    image: '/photos/Practical2.webp'
   },
   {
     title: 'Table',
-    image: '/photos/Modeling.jpg'
+    image: '/photos/Modeling.webp'
   },
   {
     title: 'Cropped Subject',
-    image: '/photos/Cropped.jpg'
+    image: '/photos/Cropped.webp'
   },
 ])
 </script>

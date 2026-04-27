@@ -11,7 +11,12 @@
       </div>
 
       <div class="image-content">
-        <img :src="currentContent.mainImage" :alt="currentContent.title" decoding="async" />
+        <img
+          :src="currentContent.mainImage"
+          :alt="currentContent.title"
+          :class="{ 'rotate-beachpic': currentContent.mainImage.includes('BeachPic.webp') }"
+          decoding="async"
+        />
       </div>
     </div>
 
@@ -22,10 +27,15 @@
         v-for="(item, index) in contentItems"
         :key="index"
         class="thumbnail"
-        :class="{ active: index === activeIndex }"
+        :class="{ active: index === activeIndex, 'beach-thumb': item.thumbnail.includes('BeachPic.webp') }"
         @click="selectContent(index)"
       >
-        <img :src="item.thumbnail" :alt="item.title" loading="lazy" decoding="async" />
+        <img
+          :src="item.thumbnail"
+          :alt="item.title"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </div>
   </section>
@@ -41,29 +51,29 @@ const contentItems = ref([
     title: 'About Me',
     subtitle: 'Hi there! I\'m Kiefer Ebanks and welcome to my website!',
     paragraph: 'I\'m currently a Junior Computer Science major at Boston University. As an aspiring software engineer, I\’m especially interested in full-stack engineering, mainframes, and distributed systems - though I have experience in IT as well. I\’m also creative at heart, which is why I have a minor in Film & Television. In my free time, I\’m working toward becoming fluent in Spanish and improving my drawing ability.',
-    mainImage: '/MePic.jpg',
-    thumbnail: '/MePic.jpg'
+    mainImage: '/MePic.webp',
+    thumbnail: '/MePic.webp'
   },
   {
     title: 'Fitness',
     subtitle: 'Here\'s a photo of my friends and I running a half-marathon!',
     paragraph: 'I LOVE lifting weights and setting new PRs (I\'m currently chasing the fated 225 Bench). This year I\'m also doing boxing classes, which is a cool way to shake things up and learn a new skill. I\'m also considering running a full marathon this year (but that still sounds a little crazy)!',
-    mainImage: '/HalfPic.jpg',
-    thumbnail: '/HalfPic.jpg'
+    mainImage: '/HalfPic.webp',
+    thumbnail: '/HalfPic.webp'
   },
   {
     title: 'Home',
     subtitle: 'I am lucky enough to call the Cayman Islands home!',
     paragraph: 'Cayman is where my family is, and where island life brings a pace and warmth that’s hard to replicate anywhere else. I love the beach, going to my grandma\s house on Sundays, and watching fireworks light up the entire coastline on New Year\'s Eve.',
-    mainImage: '/BeachPic.JPG',
-    thumbnail: '/BeachPic.JPG'
+    mainImage: '/BeachPic.webp',
+    thumbnail: '/BeachPic.webp'
   },
   {
     title: 'Film',
     subtitle: 'I’m a big fan of watching, creating, reviewing, and talking about movies',
     paragraph: 'Film is where I get to lean fully into creativity. I love breaking down scenes, themes, and the little details that make films memorable. I also enjoy making short films and drafting up stories I hope to turn into real projects one day! Check out some of my work under the creativity tab!',
-    mainImage: '/CamPic.jpg',
-    thumbnail: '/CamPic.jpg'
+    mainImage: '/CamPic.webp',
+    thumbnail: '/CamPic.webp'
   },
   {
     title: 'Future',
@@ -74,8 +84,8 @@ const contentItems = ref([
       'Write a short story',
       'Gain more experience in my field and keep learning'
     ],
-    mainImage: '/2026Pic.jpg',
-    thumbnail: '/2026Pic.jpg'
+    mainImage: '/2026Pic.webp',
+    thumbnail: '/2026Pic.webp'
   }
 ])
 
@@ -233,6 +243,21 @@ const selectContent = (index) => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.thumbnail.beach-thumb img {
+  transform: rotate(90deg) scale(1.35);
+  transform-origin: center;
+}
+
+.thumbnail.beach-thumb {
+  border-radius: 10px;
+  overflow: hidden;
+  clip-path: inset(0 round 10px);
+}
+
+.rotate-beachpic {
+  transform: rotate(90deg);
 }
 
 @media (max-width: 768px) {
