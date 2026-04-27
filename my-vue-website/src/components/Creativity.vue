@@ -15,7 +15,7 @@
           target="_blank"
           class="video-thumbnail"
         >
-          <img :src="video.thumbnail" :alt="video.title" />
+          <img :src="video.thumbnail" :alt="video.title" loading="lazy" decoding="async" />
           <div class="video-overlay">
             <span class="play-icon">▶</span>
           </div>
@@ -34,7 +34,7 @@
           :key="index"
           class="photo-item"
         >
-          <img :src="photo.image" :alt="photo.title" />
+          <img :src="photo.image" :alt="photo.title" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>

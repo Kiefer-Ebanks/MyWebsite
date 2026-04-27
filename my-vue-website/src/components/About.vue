@@ -11,7 +11,7 @@
       </div>
 
       <div class="image-content">
-        <img :src="currentContent.mainImage" :alt="currentContent.title" />
+        <img :src="currentContent.mainImage" :alt="currentContent.title" decoding="async" />
       </div>
     </div>
 
@@ -25,7 +25,7 @@
         :class="{ active: index === activeIndex }"
         @click="selectContent(index)"
       >
-        <img :src="item.thumbnail" :alt="item.title" />
+        <img :src="item.thumbnail" :alt="item.title" loading="lazy" decoding="async" />
       </div>
     </div>
   </section>

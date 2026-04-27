@@ -22,7 +22,13 @@
             </h2>
             
             <div class="project-image-wrapper" v-if="project.image">
-              <img :src="project.image" :alt="project.title" class="project-image" />
+              <img
+                :src="project.image"
+                :alt="project.title"
+                class="project-image"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             
             <p class="project-description">{{ project.description }}</p>
@@ -61,6 +67,8 @@
               :src="getDeviconUrl(item.icon)"
               :alt="item.name"
               class="skill-icon"
+              loading="lazy"
+              decoding="async"
               @error="handleImageError"
             />
             <span class="skill-name">{{ item.name }}</span>
@@ -80,6 +88,8 @@
               :src="getDeviconUrl(item.icon)"
               :alt="item.name"
               class="skill-icon"
+              loading="lazy"
+              decoding="async"
               @error="handleImageError"
             />
             <span class="skill-name">{{ item.name }}</span>
@@ -142,7 +152,7 @@ const toolsAndTechnologies = ref([
 
 const projects = ref([
   {
-    title: 'StudyBuddy',
+    title: 'StudyBUddy',
     image: '',
     techStack: ['PostgreSQL', 'ASP.NET C#', 'React Native', 'Stripe', 'Supabase', 'Expo', 'Firebase', 'Stream', 'Google Maps'],
     description: 'A mobile app for helping BU students find friends to study with, expert tutors to learn from, join study groups, or even offer up their own services as a tutor and make some money on the side!',
@@ -168,7 +178,7 @@ const projects = ref([
   {
     title: 'McLaren Dashboard',
     image: '/projects/McLarenDashboard.png',
-    techStack: ['MongoDB', 'Express.js', 'Node,js', 'React', 'Jolpica'],
+    techStack: ['MongoDB', 'Express.js', 'Node.js', 'React', 'Jolpica'],
     description: 'A dashboard for McLaren\'s F1 racing performance during 2025. Uses a MongoDB database to cache McLaren\'s performance data from the Jolpica API, and the results are displayed in a table and chart in the frontend.',
     date: 'April 2026',
     link: 'https://mclarendashboard.vercel.app/'
