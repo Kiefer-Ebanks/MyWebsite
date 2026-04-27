@@ -97,14 +97,19 @@ const languagesAndFrameworks = ref([
   { name: 'Python', icon: 'python' },
   { name: 'JavaScript', icon: 'js' },
   { name: 'TypeScript', icon: 'ts' },
+  { name: 'C#', icon: 'csharp' },
+  { name: 'SQL', icon: 'sql' },
   { name: 'C++', icon: 'cpp' },
   { name: 'Go', icon: 'go' },
   { name: 'C', icon: 'c' },
   { name: 'Java', icon: 'java' },
   { name: 'React', icon: 'react' },
+  { name: 'React Native', icon: 'reactnative' },
   { name: 'Vue', icon: 'vue' },
   { name: 'Next.js', icon: 'nextjs' },
   { name: 'Node.js', icon: 'nodejs' },
+  { name: 'ASP.NET', icon: 'aspnet' },
+  { name: 'Django', icon: 'django' },
   { name: 'Tailwind CSS', icon: 'tailwind' },
   { name: 'HTML', icon: 'html' },
   { name: 'CSS', icon: 'css' },
@@ -116,6 +121,10 @@ const toolsAndTechnologies = ref([
   { name: 'FastAPI', icon: 'fastapi' },
   { name: 'Linux', icon: 'linux' },
   { name: 'Supabase', icon: 'supabase' },
+  { name: 'PostgreSQL', icon: 'postgresql' },
+  { name: 'MongoDB', icon: 'mongodb' },
+  { name: 'Expo', icon: 'expo' },
+  { name: 'Stripe', icon: 'stripe' },
   { name: 'Vercel', icon: 'vercel' },
   { name: 'Netlify', icon: 'netlify' },
   { name: 'Docker', icon: 'docker' },
@@ -132,6 +141,38 @@ const toolsAndTechnologies = ref([
 ])
 
 const projects = ref([
+  {
+    title: 'StudyBuddy',
+    image: '',
+    techStack: ['PostgreSQL', 'ASP.NET C#', 'React Native', 'Stripe', 'Supabase', 'Expo', 'Firebase', 'Stream', 'Google Maps'],
+    description: 'A mobile app for helping BU students find friends to study with, expert tutors to learn from, join study groups, or even offer up their own services as a tutor and make some money on the side!',
+    date: 'March - April 2026',
+    link: ''
+  },
+  {
+    title: 'Film Storyboarding Web App',
+    image: '',
+    techStack: ['Django', 'SQLite', 'React'],
+    description: 'A web app with a Django backend and react frontend that allows users to sign in and plan and layout any ideas they have for stories or films, from characters, to drawings, to storyboards and scripts.',
+    date: 'April 2026',
+    link: 'https://github.com/Kiefer-Ebanks/CS412'
+  },
+  {
+    title: 'Mini Instagram',
+    image: '/projects/MiniInsta.png',
+    techStack: ['Django', 'React Native', 'Expo', 'HTML', 'CSS'],
+    description: 'Both a web and react-native mobile app instagram-like app that alows users to sign in to their profile and upload posts. Users are able to interact by leaving likes, comments, and follows on other accounts and are also shown a feed on the webapp of posts from accounts they follow as well.',
+    date: 'March - April 2026',
+    link: 'https://cs-webapps.bu.edu/kebanks/mini_insta/'
+  },
+  {
+    title: 'McLaren Dashboard',
+    image: '/projects/McLarenDashboard.png',
+    techStack: ['MongoDB', 'Express.js', 'Node,js', 'React', 'Jolpica'],
+    description: 'A dashboard for McLaren\'s F1 racing performance during 2025. Uses a MongoDB database to cache McLaren\'s performance data from the Jolpica API, and the results are displayed in a table and chart in the frontend.',
+    date: 'April 2026',
+    link: 'https://mclarendashboard.vercel.app/'
+  },
   {
     title: 'FormFixer',
     image: '',
@@ -185,11 +226,19 @@ const getDeviconUrl = (iconName) => {
   if (iconName === 'nosql') {
     return '/nosql.png'
   }
+  if (iconName === 'stripe') {
+    return 'https://cdn.simpleicons.org/stripe'
+  }
+  if (iconName === 'django') {
+    return 'https://cdn.simpleicons.org/django'
+  }
   
   // Map icon names to devicons naming conventions
   const iconMap = {
     'js': 'javascript',
     'ts': 'typescript',
+    'csharp': 'csharp',
+    'sql': 'azuresqldatabase',
     'cpp': 'cplusplus',
     'tailwind': 'tailwindcss',
     'html': 'html5',
@@ -202,10 +251,16 @@ const getDeviconUrl = (iconName) => {
     'go': 'go',
     'c': 'c',
     'java': 'java',
+    'reactnative': 'reactnative',
     'git': 'git',
+    'aspnet': 'dot-net',
+    'django': 'django',
     'fastapi': 'fastapi',
     'linux': 'linux',
     'supabase': 'supabase',
+    'postgresql': 'postgresql',
+    'mongodb': 'mongodb',
+    'expo': 'expo',
     'vercel': 'vercel',
     'netlify': 'netlify',
     'docker': 'docker',

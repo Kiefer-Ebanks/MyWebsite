@@ -35,7 +35,7 @@ const jobs = ref([
     company: 'Boston University',
     location: 'Boston, MA',
     title: 'Course Assistant',
-    date: 'Sep - Dec 2025',
+    date: 'Sep 2025 - Present',
     description: [
       'Lead 370+ students to master Python, Go, and Distributed Systems for CS111 and CS351 through labs and office hours.',
       'Adapt teaching styles to maximize student engagement and encourage problem solving and collaboration.'
