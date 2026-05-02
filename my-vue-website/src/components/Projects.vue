@@ -152,20 +152,20 @@ const toolsAndTechnologies = ref([
 
 const projects = ref([
   {
-    title: 'StudyBUddy',
-    image: '',
-    techStack: ['PostgreSQL', 'ASP.NET C#', 'React Native', 'Stripe', 'Supabase', 'Expo', 'Firebase', 'Stream', 'Google Maps'],
-    description: 'A mobile app for helping BU students find friends to study with, expert tutors to learn from, join study groups, or even offer up their own services as a tutor and make some money on the side!',
-    date: 'March - April 2026',
-    link: ''
+    title: 'FilmBoard',
+    image: '/projects/FilmBoardPic.webp',
+    techStack: ['Django', 'SQLite', 'React', 'Excalidraw'],
+    description: 'A web app with a Django backend and react frontend that allows users to sign in and plan and layout any ideas they have for stories or films, from characters, drawings and images, to storyboards and scripts.',
+    date: 'April 2026',
+    link: 'https://filmboard-ashen.vercel.app/'
   },
   {
-    title: 'Film Storyboarding Web App',
-    image: '',
-    techStack: ['Django', 'SQLite', 'React'],
-    description: 'A web app with a Django backend and react frontend that allows users to sign in and plan and layout any ideas they have for stories or films, from characters, to drawings, to storyboards and scripts.',
-    date: 'April 2026',
-    link: 'https://github.com/Kiefer-Ebanks/CS412'
+    title: 'StudyBUddy',
+    image: '/projects/StudyBuddyPic2.webp',
+    techStack: ['PostgreSQL', 'ASP.NET C#', 'React Native', 'Stripe', 'Supabase', 'Expo', 'Firebase', 'Stream', 'Google Maps'],
+    description: 'A mobile app for helping BU students find friends to study with, expert tutors to learn from, join study groups, or even offer up their own services as a tutor and make some money on the side! Built as a group project',
+    date: 'March - April 2026',
+    link: 'https://youtu.be/YdiD2fnP6Kk'
   },
   {
     title: 'Mini Instagram',
@@ -194,7 +194,7 @@ const projects = ref([
   {
     title: 'TPS Website<br>React Conversion',
     image: '/projects/Trussplant.webp',
-    techStack: ['React', 'WordPress'],
+    techStack: ['React', 'WordPress', 'Google Maps'],
     description: 'Redesigned the Truss Plant Structures business website in React, transforming it from a static, template-based layout into a modern, interactive experience. This improved user experience and client engagement through clearer content structure, intuitive navigation, and engaging visual elements. The new site includes interactive 3D components and integrated email functionality for quicker communication.',
     date: 'Dec 2025 - Jan 2026',
     link: 'https://trussplant.ky/'
